@@ -1,0 +1,133 @@
+/* Osnovni stilovi za tijelo stranice */
+body, html {
+    background-image: url('../images/quizpozadina');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    backdrop-filter: brightness(0.5) contrast(1.5);
+}
+body{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: #4646d9;
+}
+
+#start-btn{
+    background-color: #000011;
+    color: white;
+}
+
+#start-btn:hover{
+    background-color: #32323b;
+}
+
+/* Stil za kontejner kviza */
+#quiz-container {
+    width: 80%;
+    max-width: 600px;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%); 
+    margin: 50px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.818);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Stil za naslov kviza */
+#quiz-container h1 {
+    font-size: 32px;
+    color: #050000;
+}
+
+/* Stil za pitanja */
+#question {
+    font-size: 24px;
+    color: #555;
+}
+
+/* Stil za odgovore - gumbe */
+.answer-btn {
+    display: block;
+    background-color: #4caf87;
+    color: white;
+    padding: 15px 32px;
+    margin: 10px auto;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.answer-btn:hover {
+    background-color: #3ccd82;
+}
+
+.selected {
+    background-color: #19813f; /* Zatamnjeni gumb */
+    color: white;
+}
+
+.selected:hover{
+    background-color: #19813f;
+}
+
+button:disabled{
+    background-color: #4caf87;
+    color: white;
+}
+
+/* Stil za footer sa sljedećim gumbom */
+#next-btn, #finish-btn {
+    background-color: #008CBA;
+    color: white;
+    padding: 15px 32px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+#next-btn:hover, #finish-btn:hover {
+    background-color: #007b8a;
+}
+
+nav{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    gap: 5px;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li{
+    margin: 0 10px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 19px;
+    padding: 5px 5px;
+    transition: color 0.3s;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+nav ul li a:hover{
+    color: rgb(119, 209, 242);
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+}

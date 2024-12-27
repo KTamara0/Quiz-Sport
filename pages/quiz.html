@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Koji je sport idealan za tebe?</title>
+    <link rel="stylesheet" href="../styles/quizStyle.css"> 
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="../Home.html">Početna</a></li>
+            <li><a href="info.html">Informacije</a></li>
+        </ul>
+    </nav>
+
+    <div id="quiz-container">
+        <h1>Koji je sport idealan za tebe?</h1>
+        
+        <!-- Početna stranica kviza -->
+        <div id="start-screen">
+            <p>Odgovori na nekoliko pitanja i saznaj koji sport ti najviše odgovara prema tvojim preferencijama!</p>
+            <button id="start-btn" onclick="startQuiz()">Započni kviz</button>
+        </div>
+
+        <!-- Stranica za pitanja -->
+        <div id="question-screen" style="display: none;">
+            <p id="question"></p>
+            <div id="answers">
+               
+            </div>
+            <button id="next-btn" onclick="nextQuestion()" style="display: none;">Sljedeće pitanje</button>
+            <button id="finish-btn" onclick="finishQuiz()" style="display: none;">Završi kviz</button>
+        </div>
+    </div>
+
+    <script src="../scripts/quiz.js"></script>
+</body>
+</html>
