@@ -64,11 +64,13 @@ body {
     width: 100%;
   }
 
-  @media screen and (max-width: 768px) {
-    #navigation {
-      top: 10px;
-      right: 10px;
-      flex-direction: column; /* Navigacija će biti prikazana okomito */
-      gap: 10px; /* Dodavanje razmaka između elemenata */
+  @media (max-width: 768px) {
+    nav ul {
+      text-align: center;
+    }
+  
+    nav ul li {
+      display: block;
+      margin: 10px 0;
     }
   }
