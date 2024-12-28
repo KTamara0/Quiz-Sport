@@ -17,7 +17,7 @@ body {
   h1{
     font-size: 30px;
     text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
-    margin-top: 50px;
+
   }
 
   #rezultat{
@@ -71,6 +71,10 @@ body {
   
     nav ul li {
       display: block;
-      margin: 10px 0;
+      margin: 0 5px;
+    }
+
+    #rezultat-container{
+      margin-top: 100px;
     }
   }
