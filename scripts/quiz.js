@@ -149,7 +149,6 @@ function startQuiz() {
 }
 
 // Funkcija za prikazivanje pitanja
-// Funkcija za prikazivanje pitanja
 function showQuestion() {
     const currentQuestion = questions[currentQuestionIndex];
     document.getElementById('question').textContent = currentQuestion.question;
@@ -187,7 +186,7 @@ function answerQuestion(choice, button) {
     // Ako je odgovor već odabran, poništavamo ga
     if (button.classList.contains('selected')) {
         button.classList.remove('selected');
-        points = resetPoints();
+        removePointsForAnswer(answer);
         enableAllAnswers();
         return;
     }
@@ -252,15 +251,10 @@ function finishQuiz() {
   //  alert("Tvoj preporučeni sport je: " + recommendedSport);
 }
 
-// Funkcija za poništavanje svih bodova
-function resetPoints() {
-    return {
-        Nogomet: 0,
-        Rukomet: 0,
-        Tenis: 0,
-        Vaterpolo: 0,
-        Boks: 0,
-        Plivanje: 0
-    };
+// Funkcija za poništavanje bodova
+function removePointsForAnswer(answer) {
+    for (let sport in answer.points) {
+        points[sport] -= answer.points[sport];
+    }
 }
 

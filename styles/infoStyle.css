@@ -4,86 +4,98 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
-  }
-  
-  header {
+    display: grid;
+    grid-template-rows: auto 1fr auto; /* Header, sadržaj, footer */
+    min-height: 100vh; /* Osigurava da stranica zauzima cijeli prozor */
+}
+
+/* Header */
+header {
     background-color: #2a3d66;
     color: white;
     padding: 20px;
     text-align: center;
-  }
- 
-  h1{
-    font-size: 32px;
-  }
+    width: 100%;
+}
 
-  #navigation{
+h1 {
+    font-size: 32px;
+}
+
+/* Navigacija */
+#navigation {
     position: absolute;
     top: 20px;
     right: 20px;
     display: flex;
     gap: 5px;
-  }
+}
 
-  nav ul {
+#sports{
+    place-items: center;
+}
+
+nav ul {
     list-style: none;
+    display: flex;
+    gap: 15px; /* Razmak između stavki */
     padding: 0;
-  }
-  
-  nav ul li {
-    display: inline;
-    margin: 0 15px;
-  }
-  
-  nav ul li a {
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
     font-size: 16px;
     color: white;
     text-decoration: none;
-  }
+}
 
-  nav ul li a:hover{
+nav ul li a:hover {
     text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.7);
-  }
-  
-  main {
+}
+
+/* Glavni sadržaj */
+main {
     padding: 20px;
-  }
-  
-  section {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px; /* Razmak između sekcija */
+}
+
+/* Sekcije */
+section {
     background-color: white;
-    margin-bottom: 20px;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
+}
 
-  #waterpolo{
-    margin-bottom: 60px;
-  }
-  
-  h2 {
+h2 {
     color: #2a3d66;
-  }
-  
-  footer {
+}
+
+/* Footer */
+footer {
     background-color: #2a3d66;
     color: white;
     text-align: center;
     padding: 10px;
-    position: fixed;
-    bottom: 0;
     width: 100%;
-  }
+    grid-row: 3; /* Postavlja footer na zadnji red grid-a */
+}
 
-
-  @media (max-width: 768px) {
+/* Responsivni dizajn */
+@media (max-width: 768px) {
     nav ul {
-      text-align: center;
+        flex-direction: column; /* Prilagodba za manje ekrane */
+        text-align: center;
     }
-  
+
     nav ul li {
-      display: block;
-      margin: 10px 0;
+        display: block;
+        margin: 10px 0;
     }
-  }
-  
+}

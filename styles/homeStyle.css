@@ -3,54 +3,82 @@ body{
     background-size: cover;
     position: relative;
     width: 100%;
-    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 100vh;
     backdrop-filter: brightness(0.5) contrast(1.2);
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: white;
 }
+
+/*
 body{    
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #ffffff;
     display: grid;
     place-items: center;
- /*   display: flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     */
-    height: 100vh; /* osigurava da grid-conrainer zauzima cijelu visinu preglednika */
-    color: #fff;
+ /*   height: 100vh;  osigurava da grid-conrainer zauzima cijelu visinu preglednika */
+  /*  color: #fff;
+}  */
+
+#main-content{
+    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    row-gap: 0px;
 }
 
-h1 {
+#name{
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Merienda', sans-serif;
+    color: white;
+}
+
+#title {
     font-size: 48px;
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Overlock', sans-serif;
     color: #2e8b57;
     margin-bottom: 16px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 p {
-    font-size: 19.2px;
-    margin-bottom: 32px;
-    text-align: center;
+    font-size: 19px;
+    margin-bottom: 0 0 16px;
 }
 
 button{
-    display: block;
-    margin: 5px auto;
-    width: 170px;
+    margin-top: 10px 0;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease;
+    width: 170px
 }
 
 #quiz{
     background-color: #3e38f4;
-    color: #fff;
-    border: none;
-    padding: 16px 32px;
-    font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    border-radius: 10px;    
+    color: white;  
 }
 
 #quiz:hover {
@@ -61,11 +89,7 @@ button{
     background-color: #120382; 
     color: white; 
     padding: 5px 10px; 
-    text-align: center; 
-    text-decoration: none; 
-    display: inline-block; /* Gumb kao inline element */
     font-size: 12px; 
-    margin: 4px 2px; /* Razmak između gumba */
     cursor: pointer; 
     border-radius: 8px;
 }
@@ -82,10 +106,6 @@ nav{
     gap: 5px; /*Razmak izmedu gumba */
 }
 
-nav ul li{
-    margin: 0 10px;
-}
-
 
 nav ul{
     list-style: none;
@@ -94,6 +114,10 @@ nav ul{
     margin: 0;
     padding: 0;
 }  
+
+nav ul li{
+    margin: 0 10px;
+}
 
 
 nav ul li a{
@@ -108,10 +132,6 @@ nav ul li a:hover{
     color: aquamarine;
 }
 
-#main-content{
-    padding: 20px;
-    text-align: center;
-}
 
 @media (max-width: 600px) {
     h1 {
@@ -122,5 +142,14 @@ nav ul li a:hover{
     }
     button {
         padding: 0.8rem 1.5rem;
+    }
+
+    nav ul{
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    #main-content{
+        margin-top: 80px;
     }
 }
