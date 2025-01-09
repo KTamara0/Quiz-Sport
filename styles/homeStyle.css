@@ -44,12 +44,17 @@ body{
 
 #name{
     position: absolute;
-    top: 10px;
+    top: 5px;
     left: 20px;
     font-size: 30px;
     font-weight: bold;
     font-family: 'Merienda', sans-serif;
     color: white;
+}
+
+#logo{
+    position: relative;
+    top: 30px;
 }
 
 #title {
