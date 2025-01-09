@@ -87,6 +87,11 @@ footer {
     grid-row: 3; /* Postavlja footer na zadnji red grid-a */
 }
 
+::selection{
+    background-color: #2a3d66;
+    color: white;
+}
+
 /* Responsivni dizajn */
 @media (max-width: 768px) {
     nav ul {
