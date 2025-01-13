@@ -25,7 +25,19 @@ body {
     margin: 10px;
     font-size: 18px;
     font-weight: bold;
-  }
+    animation: growText 2s ease-out;
+}
+
+@keyframes growText{
+    0%{
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
 
   #navigation{
     position: absolute;
@@ -57,6 +69,7 @@ body {
     color:rgba(241, 233, 233, 0.727);
     text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.7);
   }
+
   
   footer {
     color: white;

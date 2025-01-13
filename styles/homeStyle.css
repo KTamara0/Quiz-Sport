@@ -63,11 +63,24 @@ body{
     color: #2e8b57;
     margin-bottom: 16px;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    font-style: italic;
 }
 
 p {
     font-size: 19px;
     margin-bottom: 0 0 16px;
+    animation: growText 2s ease-out;
+}
+
+@keyframes growText{
+    0%{
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
 button{
@@ -82,17 +95,17 @@ button{
 }
 
 #quiz{
-    background-color: #3e38f4;
-    color: white;  
+    background: linear-gradient(to right, rgb(118, 203, 239), white, rgb(118,203,239));
+    color: black;  
 }
 
 #quiz:hover {
-    background-color: #008cff;
+    background: linear-gradient(to right, white, rgb(118, 203, 239), white);
 }
 
 #info{
-    background-color: #120382; 
-    color: white; 
+    background: linear-gradient(to right, white, rgb(118, 203, 239), white); 
+    color: black; 
     padding: 5px 10px; 
     font-size: 12px; 
     cursor: pointer; 
@@ -100,7 +113,7 @@ button{
 }
 
 #info:hover {
-    background-color: #0b22a4; 
+    background: linear-gradient(to right, rgb(118, 203, 239), white, rgb(118,203,239)); 
 }
 
 nav{

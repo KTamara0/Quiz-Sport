@@ -38,6 +38,16 @@ h1 {
     place-items: center;
 }
 
+
+img{
+    transition: transform 0.3s ease, font-size 0.3s ease;
+}
+
+img:hover{
+    transform: scale(1.2);
+    height: 50;
+}
+
 nav ul {
     list-style: none;
     display: flex;
@@ -54,10 +64,13 @@ nav ul li a {
     font-size: 16px;
     color: white;
     text-decoration: none;
+    transition: transform 0.3s ease, font-size 0.3s ease;
 }
 
 nav ul li a:hover {
     text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.7);
+    transform: scale(1.2);
+    font-size: 17px;
 }
 
 /* Glavni sadržaj */
