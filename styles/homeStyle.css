@@ -17,22 +17,6 @@ body{
     color: white;
 }
 
-/*
-body{    
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    display: grid;
-    place-items: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    */
- /*   height: 100vh;  osigurava da grid-conrainer zauzima cijelu visinu preglednika */
-  /*  color: #fff;
-}  */
-
 #main-content{
     margin-top: 0px;
     display: flex;
@@ -117,18 +101,18 @@ button{
 }
 
 nav{
-    position: absolute; /* pozicioniranje u odnosu na tijelo stranice */
+    position: absolute; 
     top: 20px;
     right: 20px;
-    display: flex; /*postavljanje u liniju */
-    gap: 5px; /*Razmak izmedu gumba */
+    display: flex; 
+    gap: 5px; 
 }
 
 
 nav ul{
     list-style: none;
     display: flex;
-    justify-content: flex-end; /* navigacija desno */
+    justify-content: flex-end; 
     margin: 0;
     padding: 0;
 }  
@@ -150,24 +134,3 @@ nav ul li a:hover{
     color: aquamarine;
 }
 
-
-@media (max-width: 600px) {
-    h1 {
-        font-size: 2rem;
-    }
-    p {
-        font-size: 1rem;
-    }
-    button {
-        padding: 0.8rem 1.5rem;
-    }
-
-    nav ul{
-        flex-direction: column;
-        align-items: flex-end;
-    }
-
-    #main-content{
-        margin-top: 80px;
-    }
-}

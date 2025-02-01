@@ -1,14 +1,10 @@
-// Dohvati rezultat iz localStorage
 const rezultat = localStorage.getItem('rezultat');
 const rezultatContainer = document.getElementById('rezultat');
 const opisContainer = document.getElementById('opis');
 
-// Provjeri postoji li rezultat
 if (rezultat) {
-  // Prikazivanje rezultata
   rezultatContainer.textContent = rezultat;
 
-  // Prikaz odgovarajuće slike i opisa na temelju rezultata
   switch (rezultat) {
     case 'Nogomet':
       opisContainer.textContent = 'Nogomet je sport u kojem igraju dva tima od po 11 igrača. Ako voliš akciju i timsku igru, nogomet je pravi izbor za tebe!';
@@ -38,9 +34,8 @@ if (rezultat) {
       opisContainer.textContent = 'Nismo uspjeli odrediti sport. Pokušaj ponovno!';
   }
 
-  // Dodaj stilove za pozadinsku sliku
-  document.body.style.backgroundSize = 'cover'; // Slika će pokriti cijeli ekran
-  document.body.style.backgroundRepeat = 'no-repeat'; // Ne ponavljaj sliku
+  document.body.style.backgroundSize = 'cover'; 
+  document.body.style.backgroundRepeat = 'no-repeat'; 
   document.body.style.backgroundPosition = 'center';
   document.body.style.backgroundAttachment = 'fixed';
 

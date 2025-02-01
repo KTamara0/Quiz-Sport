@@ -1,18 +1,15 @@
-
-/* Osnovni stilovi */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
     display: grid;
-    grid-template-rows: auto 1fr auto; /* Header, sadržaj, footer */
-    min-height: 100vh; /* Osigurava da stranica zauzima cijeli prozor */
+    grid-template-rows: auto 1fr auto; 
+    min-height: 100vh; 
     overflow-x: hidden;
 
 }
 
-/* Header */
 header {
     background-color: #2a3d66;
     color: white;
@@ -25,7 +22,6 @@ h1 {
     font-size: 32px;
 }
 
-/* Navigacija */
 #navigation {
     position: absolute;
     top: 20px;
@@ -51,7 +47,7 @@ img:hover{
 nav ul {
     list-style: none;
     display: flex;
-    gap: 15px; /* Razmak između stavki */
+    gap: 15px; 
     padding: 0;
     margin: 0;
 }
@@ -73,27 +69,26 @@ nav ul li a:hover {
     font-size: 17px;
 }
 
-/* Glavni sadržaj */
 main {
     padding: 20px;
     display: grid;
     grid-template-columns: 1fr;
-    gap: 20px; /* Razmak između sekcija */
+    gap: 20px; 
 }
 
-/* Sekcije */
 section {
     background-color: white;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
 }
+
 
 h2 {
     color: #2a3d66;
 }
 
-/* Footer */
 footer {
     background-color: #2a3d66;
     color: white;
@@ -101,7 +96,7 @@ footer {
     padding: 10px;
     width: 100%;
     max-width: 100vw;
-    grid-row: 3; /* Postavlja footer na zadnji red grid-a */
+    grid-row: 3; 
     overflow: hidden;
 
 }
@@ -111,15 +106,3 @@ footer {
     color: white;
 }
 
-/* Responsivni dizajn */
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column; /* Prilagodba za manje ekrane */
-        text-align: center;
-    }
-
-    nav ul li {
-        display: block;
-        margin: 10px 0;
-    }
-}

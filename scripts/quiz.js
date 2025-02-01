@@ -8,7 +8,6 @@ let points = {
     Plivanje: 0
 };
 
-// Pitanja i odgovori za kviz
 const questions = [
     {
         question: "1. Koji tip fizičke aktivnosti te najviše privlači?",
@@ -141,49 +140,39 @@ const questions = [
     
 ];
 
-// Funkcija za započeti kviz
 function startQuiz() {
     document.getElementById('start-screen').style.display = 'none';
     document.getElementById('question-screen').style.display = 'block';
     showQuestion();
 }
 
-// Funkcija za prikazivanje pitanja
 function showQuestion() {
     const currentQuestion = questions[currentQuestionIndex];
     document.getElementById('question').textContent = currentQuestion.question;
     const answers = currentQuestion.answers;
     const answersContainer = document.getElementById('answers');
 
-    // Resetiraj sadržaj odgovora (ako je potrebno)
     answersContainer.innerHTML = '';
 
-    // Prikazivanje odgovora
     for (let answer in answers) {
         const button = document.createElement('button');
         button.classList.add('answer-btn');
         button.textContent = answers[answer].text;
         
-        // Povezivanje funkcionalnosti odgovora
         button.onclick = function() { answerQuestion(answer, button); };
 
-        // Dodavanje gumba u kontejner odgovora
         answersContainer.appendChild(button);
     }
 
-    // Sakrivanje gumba za sljedeće pitanje
     document.getElementById('next-btn').style.display = 'none';
     document.getElementById('finish-btn').style.display = 'none';
 }
 
 
-// Funkcija za odgovor
 function answerQuestion(choice, button) {
-    // Dodajte bodove na temelju odgovora
     const currentQuestion = questions[currentQuestionIndex];
     const answer = currentQuestion.answers[choice];
 
-    // Ako je odgovor već odabran, poništavamo ga
     if (button.classList.contains('selected')) {
         button.classList.remove('selected');
         removePointsForAnswer(answer);
@@ -191,15 +180,12 @@ function answerQuestion(choice, button) {
         return;
     }
 
-     // Dodajte bodove za svaki odabrani odgovor
      for (let sport in answer.points) {
         points[sport] += answer.points[sport];
     }
-    // Dodajemo klasu za odabrani odgovor
     button.classList.add('selected');
-    disableOtherAnswers(button); // Onemogućavamo ostale odgovore
+    disableOtherAnswers(button); 
 
-    // Prikazivanje gumba za sljedeće pitanje
     if (currentQuestionIndex < questions.length - 1) {
         document.getElementById('next-btn').style.display = 'inline-block';
     } else {
@@ -211,7 +197,7 @@ function disableOtherAnswers(selectedButton) {
     const buttons = document.querySelectorAll('.answer-btn');
     buttons.forEach(button => {
         if (button !== selectedButton) {
-            button.disabled = true; // Onemogućavamo ostale odgovore
+            button.disabled = true; 
         }
     });
 }
@@ -219,18 +205,16 @@ function disableOtherAnswers(selectedButton) {
 function enableAllAnswers() {
     const buttons = document.querySelectorAll('.answer-btn');
     buttons.forEach(button => {
-        button.disabled = false; // Ponovno omogućavamo odgovore
-        button.classList.remove('selected'); // Uklanjamo klasu sa svih odgovora
+        button.disabled = false; 
+        button.classList.remove('selected'); 
     });
 }
 
-// Funkcija za prelazak na sljedeće pitanje
 function nextQuestion() {
     currentQuestionIndex++;
     showQuestion();
 }
 
-// Funkcija za završetak kviza
 function finishQuiz() {
     let maxPoints = 0;
     let recommendedSport = "";
@@ -242,16 +226,11 @@ function finishQuiz() {
         }
     }
 
-    // Spremi rezultat u localStorage kako bi bio dostupan na stranici s rezultatima
     localStorage.setItem('rezultat', recommendedSport);
 
-    // Preusmjeri korisnika na stranicu s rezultatima
-    window.location.href = '../pages/result.html';  // Ovdje ide naziv tvoje stranice za rezultat
-
-  //  alert("Tvoj preporučeni sport je: " + recommendedSport);
+    window.location.href = '../pages/result.html';  
 }
 
-// Funkcija za poništavanje bodova
 function removePointsForAnswer(answer) {
     for (let sport in answer.points) {
         points[sport] -= answer.points[sport];

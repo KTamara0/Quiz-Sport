@@ -1,5 +1,5 @@
 function startQuiz() {
-    window.location.href = "pages/quiz.html";  //navigacija za kviz stranicu
+    window.location.href = "pages/quiz.html";  
 }
 
 function knowMore(){
